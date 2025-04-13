@@ -1513,4 +1513,7 @@
     <string name="qs_edit_mode_category_unknown" msgid="509314252124053550">"未知"</string>
     <string name="qs_edit_mode_reset_dialog_title" msgid="5344853290033761627">"要重置所有功能块吗？"</string>
     <string name="qs_edit_mode_reset_dialog_content" msgid="7474773130622653653">"所有“快捷设置”功能块都将重置为设备的原始设置"</string>
+
+    <!-- Volume panel QS tile -->
+    <string name="quick_settings_volume_panel_label">音量面板</string>
 </resources>
