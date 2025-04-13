@@ -1453,4 +1453,7 @@
     <string name="qs_edit_mode_category_providedByApps" msgid="8346112074897919019">"由应用提供"</string>
     <string name="qs_edit_mode_category_display" msgid="4749511439121053942">"显示"</string>
     <string name="qs_edit_mode_category_unknown" msgid="509314252124053550">"未知"</string>
+
+    <!-- Volume panel QS tile -->
+    <string name="quick_settings_volume_panel_label">音量面板</string>
 </resources>
