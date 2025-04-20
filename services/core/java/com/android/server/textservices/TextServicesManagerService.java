@@ -150,7 +150,7 @@ public class TextServicesManagerService extends ITextServicesManager.Stub {
         }
 
         public boolean isSpellCheckerEnabled() {
-            return getBoolean(Settings.Secure.SPELL_CHECKER_ENABLED, true);
+            return getBoolean(Settings.Secure.SPELL_CHECKER_ENABLED, false);
         }
 
         @Nullable
