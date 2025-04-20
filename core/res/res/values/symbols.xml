@@ -5615,4 +5615,7 @@
   <!-- Identity check strings -->
   <java-symbol type="string" name="identity_check_settings_action" />
   <java-symbol type="string" name="identity_check_settings_package_name" />
+
+  <!-- Whether to cancel fingerprint operation if not idle -->
+  <java-symbol type="bool" name="config_fpCancelIfNotIdle" />
 </resources>
