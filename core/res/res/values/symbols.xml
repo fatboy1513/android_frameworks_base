@@ -5885,4 +5885,6 @@
   <java-symbol type="dimen" name="config_shapeCornerRadiusXlarge"/>
 
 
+  <!-- Whether to cancel fingerprint operation if not idle -->
+  <java-symbol type="bool" name="config_fpCancelIfNotIdle" />
 </resources>

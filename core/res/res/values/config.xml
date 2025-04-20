@@ -7281,4 +7281,6 @@
          features. Examples include the search functionality or the app
          predictor. -->
     <string name="config_systemVendorIntelligence" translatable="false"></string>
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">false</bool>
 </resources>

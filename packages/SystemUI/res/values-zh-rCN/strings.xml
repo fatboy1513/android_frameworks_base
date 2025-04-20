@@ -1516,4 +1516,7 @@
 
     <!-- Volume panel QS tile -->
     <string name="quick_settings_volume_panel_label">音量面板</string>
+
+    <!-- Text while recognizing face -->
+    <string name="face_unlock_recognizing">正在识别人脸...</string>
 </resources>
