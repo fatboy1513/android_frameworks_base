@@ -249,6 +249,7 @@ java_library_static {
         "android.adpf.sessionmanager_aidl-java",
         "uprobestats_flags_java_lib",
         "vendor.aospa.biometrics.face",
+        "Services-proto",
     ],
     javac_shard_size: 50,
     javacflags: [
@@ -316,4 +317,16 @@ prebuilt_etc {
 prebuilt_etc {
     name: "core.protolog.pb",
     src: ":gen-core.protolog.pb",
+}
+
+java_library {
+    name: "Services-proto",
+
+    srcs: [
+        "java/com/android/server/location/provider/schema/AppleWloc.proto"
+    ],
+
+    proto: {
+        type: "lite",
+    },
 }

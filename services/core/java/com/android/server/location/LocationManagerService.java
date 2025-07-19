@@ -157,6 +157,7 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.concurrent.Executors;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -447,6 +448,11 @@ public class LocationManagerService extends ILocationManager.Stub implements
     }
 
     void onSystemThirdPartyAppsCanStart() {
+        Log.i(TAG, "Initializing custom AppleWifiLocationProvider as the Network Location Provider.");
+        LocationProviderManager networkManager1 = new LocationProviderManager(mContext,
+                mInjector, NETWORK_PROVIDER, mPassiveManager);
+        addLocationProviderManager(networkManager1, new com.android.server.location.provider.AppleWifiLocationProvider(mContext, Executors.newSingleThreadScheduledExecutor()));
+
         // network provider should always be initialized before the gps provider since the gps
         // provider has unfortunate hard dependencies on the network provider
         ProxyLocationProvider networkProvider = ProxyLocationProvider.create(

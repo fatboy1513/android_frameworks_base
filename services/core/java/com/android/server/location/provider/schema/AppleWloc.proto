@@ -1,0 +1,47 @@
+syntax = "proto2";
+
+// 选项 1: 强制包名与您的文件路径匹配
+option java_package = "com.android.server.location.provider.schema";
+
+// 选项 2: 强制外部类名与您的要求 (AppleWloc) 匹配
+option java_outer_classname = "AppleWloc";
+
+// --- 用于构建请求的 Protobuf 消息 ---
+message Request {
+    optional int64 unknown_value0 = 1; 
+    repeated WifiDevice wifi_devices = 2; 
+    optional int32 unknown_value1 = 3; 
+    optional int32 return_single_result = 4; 
+    optional string APIName = 5;
+}
+
+// --- 用于解析响应的 Protobuf 消息 (结构与您的要求完全一致) ---
+message WifiDevice {
+    required string bssid = 1;
+
+    message Location {
+        optional int64 latitude = 1;
+        optional int64 longitude = 2;
+        optional int64 unknown_value3 = 3; 
+        optional int64 unknown_value4 = 4; 
+        optional int64 unknown_value5 = 5; 
+        optional int64 unknown_value6 = 6; 
+        optional int64 unknown_value7 = 7; 
+        optional int64 unknown_value8 = 8; 
+        optional int64 unknown_value9 = 9; 
+        optional int64 unknown_value10 = 10; 
+        optional int64 unknown_value11 = 11; 
+        optional int64 unknown_value12 = 12; 
+        optional int64 unknown_value21 = 21;
+    }
+    optional Location location = 2; 
+}
+
+// 这是您提供的根消息，我将其重命名为 Response 以避免与外部类名冲突
+message Response {
+    optional int64 unknown_value0 = 1; 
+    repeated WifiDevice wifi_devices = 2; 
+    optional int32 unknown_value1 = 3; 
+    optional int32 return_single_result = 4; 
+    optional string APIName = 5;
+}
