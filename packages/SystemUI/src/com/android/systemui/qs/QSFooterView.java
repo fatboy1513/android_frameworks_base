@@ -94,7 +94,7 @@ public class QSFooterView extends FrameLayout {
             // Set as selected for marquee before its made visible, then it won't be announced when
             // it's made visible.
             mBuildText.setSelected(true);
-            mShouldShowBuildText = true;
+            mShouldShowBuildText = false;
         } else {
             mBuildText.setText(null);
             mShouldShowBuildText = false;
